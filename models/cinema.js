@@ -37,8 +37,8 @@ Cinema.prototype.checkFilmLength = function(filmLength) {
 }
 
 Cinema.prototype.totalRunningTime = function () {
-  const runningTime = this.films.reduce(function(totalTime, currentFilm) {
-    return totalTime + currentFilm;
+  const runningTime = this.films.reduce( function(totalTime, currentFilm) {
+    return totalTime += currentFilm.length;
   },0);
   return runningTime;
 }
